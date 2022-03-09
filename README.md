@@ -8,6 +8,12 @@ npm install httpbus
 
 # example
 ```ts
+import * as path from 'path'
+import * as http from 'http'
+import * as net from 'net'
+import { HttpBus } from 'httpbus'
+
+const socketPath = path.join(__dirname,'test.sock')
 const httpBus = new HttpBus(function (req:http.IncomingMessage):net.NetConnectOpts {
     if(req.url==='/socket' || req.headers['go-socket']==='true') {
         return {
