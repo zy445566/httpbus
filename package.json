@@ -1,0 +1,23 @@
+{
+  "name": "httpbus",
+  "version": "1.0.0",
+  "description": "http bus",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "npm run build && node ./build/test.js",
+    "build": "rm -rf ./build/ && npx tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.26",
+    "node-fetch": "^2.6.7",
+    "typescript": "^4.4.4"
+  },
+  "keywords": [
+    "http",
+    "bus",
+    "proxy",
+    "programmable"
+  ],
+  "author": "zy445566",
+  "license": "MIT"
+}
